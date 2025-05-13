@@ -20,6 +20,7 @@ describe('Изменения статуса потребности', () => {
             .filter((index, el) => {
                 return Cypress.$(el).text().trim() === 'Опубликовать';
             })
+            .filter(':visible')
             .first()
             .click();
     });

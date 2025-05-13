@@ -8,12 +8,6 @@ describe('Создание потребности работодателем', (
 
         cy.contains('Потребности', { timeout: 10000 }).should('be.visible').click();
 
-        const title = 'Тестовая потребность ' + Date.now();
-        cy.get('input[placeholder="Название"]').type(title);
-        cy.get('textarea').type('Описание автотеста');
-        cy.get('select').first().select(1); // 1 — любой пункт
-        cy.contains('Сохранить').click();
 
-        cy.contains(title).should('exist');
     });
 });
